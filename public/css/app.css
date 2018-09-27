@@ -1,0 +1,54 @@
+.h1-new{
+  margin: 100px 0 20px 0;
+  text-align: center;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form-newejs {
+  width: 70%;
+  margin: 15px auto;
+}
+
+#newbutton{
+  width: 40%;
+}
+
+.showbutton {
+  width: 30%;
+  margin: 15px 15px 15px 0;
+}
+
+.showform {
+  display: inline-block;
+}
+
+.row-width{
+  width: 100%;
+  max-width: 66.66666%;
+  float: none;
+}
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+.mr-auto, .mx-auto {
+    margin-right: auto!important;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+@media only screen and (min-width: 992px) {
+  #mainNav .navbar-nav > li.nav-item > a {
+    color: #eaa61e;
+  }
+  #mainNav .navbar-brand {
+    color: #eaa61e;
+  }
+}

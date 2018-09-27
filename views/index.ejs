@@ -1,0 +1,29 @@
+<% include ./partials/header %>
+<header class="masthead" style="background-image: url('/img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Blog de Prueba</h1>
+            <span class="subheading">(rutas RESTful MongoDB, Node y ExpressJS)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+<% blogs.forEach(function(blog) { %>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto row-width">
+        <h1 class="section-heading"><%= blog.title%></h1>
+        <img class="img-fluid" src="<%=blog.image%>">
+        <p><%-blog.body.substring(0,100)%>...</p>
+        <div>
+          <a href="/blogs/<%= blog._id %>" class="btn btn-sm btn-primary showbutton">Leer más...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<% }); %>
+<% include ./partials/footer %>

@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto row-width">
+        <h1 class="h1-new section-heading"><%= blog.title%></h1>
+        <img class="img-fluid" src="<%=blog.image%>">
+        <p><%-blog.body%></p>
+        <span class="caption text-muted"><%=blog.created.toDateString()%></span>
+        <a href="/blogs/<%=blog._id%>/edit" class="btn btn-lg btn-warning showbutton">Editar Post</a>
+        <form class="showform" action="/blogs/<%=blog._id%>?_method=DELETE" method="post">
+          <div class="form-group">
+            <button class="btn btn-lg btn-danger">Borrar Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</article>
+<% include ./partials/footer %>

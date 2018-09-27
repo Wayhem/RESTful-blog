@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+<div class="container">
+  <h1 class="h1-new">Nuevo Post</h1>
+    <form action="/blogs" method="post">
+      <div class="form-group form-newejs">
+        <label for="title">Titulo:</label>
+        <input class="form-control" type="text" name="blog[title]" id="title">
+      </div>
+      <div class="form-group form-newejs">
+        <label for="image">Image URL:</label>
+        <input class="form-control" type="text" name="blog[image]" id="image">
+      </div>
+      <div class="form-group form-newejs">
+        <label for="body">Contenido:</label>
+        <textarea required class="form-control" rows="10" id="body" name="blog[body]"></textarea>
+      </div>
+      <div class="form-group form-newejs">
+        <button id="newbutton" class="btn btn-lg btn-primary btn-block">Añadir Post</button>
+      </div>
+    </form>
+</div>
+<% include ./partials/footer %>

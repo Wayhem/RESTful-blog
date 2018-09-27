@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+<div class="container">
+  <h1 class="h1-new">Edit <%= blog.title %></h1>
+    <form action="/blogs/<%=blog._id%>?_method=PUT" method="post">
+      <div class="form-group form-newejs">
+        <label for="title">Title:</label>
+        <input class="form-control" type="text" name="blog[title]" id="title" value="<%=blog.title%>">
+      </div>
+      <div class="form-group form-newejs">
+        <label for="image">Image URL:</label>
+        <input class="form-control" type="text" name="blog[image]" id="image" value="<%=blog.image%>">
+      </div>
+      <div class="form-group form-newejs">
+        <label for="body">Content:</label>
+        <textarea required class="form-control" rows="10" id="body" name="blog[body]"><%=blog.body%></textarea>
+      </div>
+      <div class="form-group form-newejs">
+        <button id="newbutton" class="btn btn-lg btn-primary btn-block">Editar Post</button>
+      </div>
+    </form>
+</div>
+<% include ./partials/footer %>
